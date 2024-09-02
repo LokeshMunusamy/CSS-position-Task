@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <p>Contact Us</p>
+      </div>
+
+      <div class="first_div">
+        <button id="myBtn">Click Here</button>
+      </div>
+
+      <div id="myModal">
+        <form action="">
+          <div class="icon">
+            <button><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="user-input">
+            <div class="details">
+              <input type="text" name="text" id="fname" required />
+
+              <label for="fname">Name:</label>
+            </div>
+            <div class="details1">
+              <input type="email" name="email" id="email" required />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="details2">
+              <textarea name="message" id="message"></textarea>
+              <label class="message" for="message">Message</label>
+            </div>
+              <button class="details3">Send</button>
+        </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("icon")[0];
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
